@@ -126,7 +126,8 @@ const TelemetryComponent = () => {
             await fetch(`${BACKEND_URL}/api/telemetry/audit`, {
                 method: 'POST',
                 headers: { 
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'ngrok-skip-browser-warning': 'true'
                 },
                 body: JSON.stringify(payload)
             });

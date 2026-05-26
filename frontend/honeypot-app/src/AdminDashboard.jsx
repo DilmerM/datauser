@@ -8,7 +8,11 @@ const AdminDashboard = () => {
         // Pedimos los datos reales a SQL Server a través del backend C#
         const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5006';
         console.log(`Intentando conectar con el backend en ${BACKEND_URL}...`);
-        fetch(`${BACKEND_URL}/api/telemetry/victims`)
+        fetch(`${BACKEND_URL}/api/telemetry/victims`, {
+            headers: {
+                'ngrok-skip-browser-warning': 'true'
+            }
+        })
             .then(async res => {
                 if (!res.ok) {
                     const text = await res.text();
