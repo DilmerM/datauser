@@ -22,3 +22,16 @@
 .custom-google-btn:hover {
     background-color: #357AE8;
 }
+
+.welcome-message {
+    text-align: center;
+    color: white;
+}
+
+.admin-dashboard {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    min-height: 100vh;
+}
